@@ -13,7 +13,15 @@ namespace HomeworkTemplate
                 // You can get all needed inputs from task.[Property]
                 // Good luck!
 
-                return "My answer";
+                int oneSidePaddingSize = Task2.Padding / 2;
+
+                string decoration = new String(task.DecorativeSign, oneSidePaddingSize);
+                string spacePadding = new String(' ', oneSidePaddingSize);
+                string moneyBalance = task.Balance.ToString("C2");
+
+                string result = $"{decoration}{spacePadding}{moneyBalance}{spacePadding}{decoration}";
+
+                return result;
             };
 
             Task2.CheckSolver(TaskSolver);
